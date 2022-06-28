@@ -18,3 +18,7 @@
           document.getElementById('regis-form').style.left = "800px"
           console.log('click')
      })
+     document.getElementById('book-mobil').addEventListener('click', function() {
+          document.querySelector('.form-booknow').classList.toggle('active')
+          console.log('click')
+     })

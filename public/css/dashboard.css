@@ -131,7 +131,6 @@ nav ul li a:hover {
      padding: 12px 5px;
      border-radius: 10px;
      font-size: 15px;
-     
 }
 .form-container #close-login{
      position: absolute;
@@ -159,6 +158,7 @@ nav ul li a:hover {
      background-color: rgb(84, 84, 216);
      color: white;
      width: 100%;
+     cursor: pointer;
 }
 #login-click{
      font-family: 'League Gothic', sans-serif;
@@ -167,6 +167,7 @@ nav ul li a:hover {
      font-size: 25px;
      font-weight: bold;
      text-decoration: underline;
+     cursor: pointer;
 }
 #regis-click{
      font-family: 'League Gothic', sans-serif;
@@ -175,6 +176,7 @@ nav ul li a:hover {
      font-size: 25px;
      font-weight: bold;
      text-decoration: underline;
+     cursor: pointer;
 }
 #login-form{
      left: 10;
@@ -186,16 +188,18 @@ nav ul li a:hover {
 }
 .img-container{
      align-items: center;
+     overflow: hidden;
 }
 .img-con2 .img-slider{
      align-items: center;
-     height: 90%;
-     width: 100%;
      justify-content: center;
      
 }
+.img-con2{
+     display: flex;
+     animation: slide 10s infinite;
+}
 .img-slider{ 
-     
      opacity: 0.3;
      height: 90%;
      width: 100%;
@@ -204,24 +208,117 @@ nav ul li a:hover {
 .img-container h2{
      position: absolute;
      font-family: 'League Gothic', sans-serif;
-     top: 50%;
+     top: 40%;
      width: 100%;
      text-align: center;
-     font-size: 30px;
+     font-size: 50px;
      color: white;
      font-weight: bold;
 }
+
 .mobil-container{
+     text-align: center;
+     margin: 20px 400px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     /* grid-template-columns: repeat(3); */
+     
+}
+.txt-veh{
+     padding: 20px;
+     text-align: center;
+     color: white;
+     font-family: 'League Gothic', sans-serif;
+     font-size: 100px;
+}
+.grid{
+     background-color: white;
+     padding: 30px;
+     margin: 10px;
+     transition: 0.3s;
+     border-radius: 10px;
+     
+}
+/* .mobil-grid-container{
+     padding: 0 10%;
+     display: flex;
+     flex-wrap: wrap;
+     background-color: #3D2C8D;
+     background-color: #3D2C8D;
+     grid-template-columns: repeat(auto-fill);
+} */
+.mobil-container .grid .mobil-book{
+     font-family: 'League Gothic', sans-serif;
+     padding: 8px 25px;
+     font-size: 25px;
+     border: none;
+     border-radius: 10px;
+     background-color: rgb(84, 84, 216);
+     color: white;
+     width: 100%;
+}
+.mobil-container .grid:hover{
+     padding: 50px;
+}
+.form-booknow{
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     display: flex;
      justify-content: center;
      align-items: center;
-     top: 100%;
-     background-color: #3D2C8D;
-     text-align: center;
-     padding: 0 10%;
-     margin: 2% 20%;
+     top: 0; left: 0;
+     background-color: rgb(255, 255, 255,0.4);
+     transition: 0.4s;
+     opacity: 0;
+     /* overflow: hidden; */
 }
-.mobil-container p{
+.form-booknow #close-booknow{
+     position: absolute;
+     top: 10%;right: 10%;
+     font-size: 40px;
      color: white;
+     cursor: pointer;
+}
+.form-booknow.active{
+     transition: 0.4s;
+     left: 0;
+     opacity: 1;
+}
+.input-field-book form .box{
+     border: none;
+     margin: 5px -3px ;
+     width: 100%;
+     padding: 12px 5px;
+     border-radius: 10px;
+     font-size: 15px;
+}
+.input-field-book form h3{
+     color: white;
+     font-family: 'League Gothic', sans-serif;
+     font-size: 40px;
+     padding-bottom: 10px;
+}
+@keyframes slide{
+     0%{
+          transform: translateX(100%);
+     }
+     25%{
+          transform: translateX(0);
+     }30%{
+          transform: translateX(-100%);
+     }50%{
+          transform: translateX(-100%);
+     }55%{
+          transform: translateX(-200%);
+     }75%{
+          transform: translateX(-200%);
+     }80%{
+          transform: translateX(-300%)
+     }100%{
+          transform: translateX(-400%);
+     }
 }
 @media screen and (max-width : 1320px) {
      header{
