@@ -1,5 +1,5 @@
 <?php
-define('BASEURL','http://localhost:80/PWL-main/public/');
+define('BASEURL','http://localhost:80/PWL/public/');
 //DB
 define('DB_HOST','localhost');
 define('DB_USER','root');
