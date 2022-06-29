@@ -18,7 +18,31 @@
           document.getElementById('regis-form').style.left = "800px"
           console.log('click')
      })
-     document.getElementById('book-mobil').addEventListener('click', function() {
-          document.querySelector('.form-booknow').classList.toggle('active')
+     // function btnbooknow(img){
+     //      document.getElementById('book-mobil').addEventListener('click', function() {
+     //           var nama = document.getElementById('nama-mobil').innerText
+     //           var harga = document.getElementById('harga-mobil').innerText
+     //           // document.getElementById('book-nama').value = 
+     //           // document.getElementById('book-harga').value = 
+     //           document.querySelector('.from-booknow').classList.toggle('activet')
+     
+     //           console.log('click')
+     //      })
+     //      document.getElementById('close-book').addEventListener('click', function() {
+     //           document.querySelector('.from-booknow').classList.remove('activet')
+     //           console.log('click')
+     //      })
+     // }
+     // document.getElementById('book-mobil').addEventListener('click', function() {
+     //      var nama = document.getElementById('nama-mobil').innerText
+     //      var harga = document.getElementById('harga-mobil').innerText
+     //      document.getElementById('book-nama').value = nama
+     //      document.getElementById('book-harga').value = harga
+     //      document.querySelector('.from-booknow').classList.toggle('activet')
+
+     //      console.log('click')
+     // })
+     document.getElementById('close-book').addEventListener('click', function() {
+          document.querySelector('.from-booknow').classList.remove('activet')
           console.log('click')
      })

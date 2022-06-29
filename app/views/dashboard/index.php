@@ -29,19 +29,39 @@
 <h1 class="txt-veh">Vehecles</h1>
 <div class="mobil-container">
      <?php foreach ($data['mmobil'] as $mobil) : ?>
-
           <div class="grid">
                <img src="<?= BASEURL ?><?= $mobil['img'] ?>" alt="" height="100" width="150">
-               <h2><?= $mobil['nama'] ?></h2>
-               <h4><?= $mobil['harga'] ?></h4>
+               <h2 id="nama-mobil"><?= $mobil['nama'] ?></h2>
+               <h4 id="harga-mobil"><?= $mobil['harga'] ?></h4>
                <!-- <input type="button" value="Book Now" class="mobil-book"> -->
-               <button class="mobil-book" id="book-mobil">BOOK NOW</button>
+               <!-- <button class="mobil-book" id="book-mobil">BOOK NOW</button> -->
+               <input type="button" value="BOOK NOW" class="mobil-book" id="book-mobil" onclick="btnbook('<?=$mobil['nama']?>')">
+               <script>
+                    function btnbook(mobil){
 
+                         var mobil = <?php echo json_encode($mobil); ?>
+     
+                         // var nama = mobil.nama
+                         console.log(mobil)
+     
+                         document.getElementById('book-mobil').addEventListener('click', function() {
+                              
+                                   document.getElementById('book-nama').value =mobil['nama']
+     
+                                   // document.getElementById('book-harga').value = mobil[]
+                                   
+                             
+                              
+                              document.querySelector('.from-booknow').classList.toggle('activet')
+                         })
+                    }
+
+
+               </script>
           </div>
      <?php endforeach; ?>
 </div>
-
-<!-- Conntact Us -->
+<!-- Constact Us -->
 
 <div class="contactus-container">
 
@@ -50,14 +70,15 @@
 <div class="from-booknow">
      <span class="fas fa-times" id="close-book"></span>
      <div class="from2-booknow">
-          <div id="book-form">
-               <form action="<?php
-                              ?>">
-                    <h3>LOGIN</h3>
+          <div id="book-form" class="input-field-booknow">
+               <form action="">
+                    <h3>Booking</h3>
+                    <input type="text" placeholder="Nama Mobil" class="box" id="book-nama">
+                    <input type="text" placeholder="harga" class="box" id="book-harga">
                     <input type="text" placeholder="Username" class="box">
                     <input type="text" placeholder="Password" class="box">
-                    <p>Forget Password? <a href="#"> Click Here</a></p>
-                    <input type="button" value="Login Now" class="btn">
+
+                    <input type="button" value="Book Now" class="btn">
                </form>
           </div>
      </div>

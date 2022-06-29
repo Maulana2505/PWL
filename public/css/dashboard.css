@@ -261,32 +261,51 @@ nav ul li a:hover {
 .mobil-container .grid:hover{
      padding: 50px;
 }
-.form-booknow{
+/* Form BookNow */
+.from-booknow{
      height: 100%;
      width: 100%;
-     position: absolute;
      display: flex;
+     position: absolute;
      justify-content: center;
      align-items: center;
-     top: 0; left: 0;
+     top: 115%; left: -105%;
      background-color: rgb(255, 255, 255,0.4);
      transition: 0.4s;
      opacity: 0;
-     /* overflow: hidden; */
+     overflow: hidden;
 }
-.form-booknow #close-booknow{
-     position: absolute;
-     top: 10%;right: 10%;
-     font-size: 40px;
-     color: white;
-     cursor: pointer;
-}
-.form-booknow.active{
+.from-booknow.activet{
      transition: 0.4s;
      left: 0;
      opacity: 1;
 }
-.input-field-book form .box{
+/* LOGIN form */
+.from2-booknow{
+     position: relative;
+     width: 420px;
+     height: 420px;
+     padding: 10px;
+     background-color: black;
+     overflow: hidden;
+}
+.input-field-booknow{
+     background-color: transparent;
+     text-align: center;
+     border-radius: 10px;
+     padding: 12px 5px;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     transition: 0.2s;
+}
+.input-field-booknow form h3{
+     color: white;
+     font-family: 'League Gothic', sans-serif;
+     font-size: 40px;
+     padding-bottom: 10px;
+}
+.input-field-booknow form .box{
      border: none;
      margin: 5px -3px ;
      width: 100%;
@@ -294,11 +313,33 @@ nav ul li a:hover {
      border-radius: 10px;
      font-size: 15px;
 }
-.input-field-book form h3{
+.from-booknow #close-book{
+     position: absolute;
+     top: 10%;right: 10%;
+     font-size: 40px;
+     color: white;
+     cursor: pointer;
+}
+.input-field-booknow form p {
      color: white;
      font-family: 'League Gothic', sans-serif;
-     font-size: 40px;
-     padding-bottom: 10px;
+     padding: 1rem;
+     font-size: 20px;
+}
+.input-field-booknow form p a{
+     display: inline-block;
+     color: rgb(84, 84, 216);
+}
+.input-field-booknow form .btn{
+     font-family: 'League Gothic', sans-serif;
+     padding: 10px 25px;
+     font-size: 25px;
+     border: none;
+     border-radius: 10px;
+     background-color: rgb(84, 84, 216);
+     color: white;
+     width: 100%;
+     cursor: pointer;
 }
 @keyframes slide{
      0%{
