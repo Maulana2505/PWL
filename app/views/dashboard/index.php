@@ -8,7 +8,9 @@
           </ul>
      </nav>
      <div class="nav-login">
-          <input type="button" value="Login" class="btn1" id="btn1">
+          <a href="<?= BASEURL?>/login"><input type="button" value="Login" class="btn1" id="btn1"></a>
+          <!-- <input type="button" value="Login" class="btn1" id="btn1"> -->
+          <img src="<?= BASEURL ?>/img/user.png" alt="" height="25" width="30" id="img-nav" style="display: none;">
      </div>
 </header>
 
@@ -33,36 +35,32 @@
                <img src="<?= BASEURL ?><?= $mobil['img'] ?>" alt="" height="100" width="150">
                <h2 id="nama-mobil"><?= $mobil['nama'] ?></h2>
                <h4 id="harga-mobil"><?= $mobil['harga'] ?></h4>
-               <!-- <input type="button" value="Book Now" class="mobil-book"> -->
-               <!-- <button class="mobil-book" id="book-mobil">BOOK NOW</button> -->
-               <input type="button" value="BOOK NOW" class="mobil-book" id="book-mobil" onclick="btnbook('<?=$mobil['nama']?>')">
-               <script>
-                    function btnbook(mobil){
-
-                         var mobil = <?php echo json_encode($mobil); ?>
-     
-                         // var nama = mobil.nama
-                         console.log(mobil)
-     
-                         document.getElementById('book-mobil').addEventListener('click', function() {
-                              
-                                   document.getElementById('book-nama').value =mobil['nama']
-     
-                                   // document.getElementById('book-harga').value = mobil[]
-                                   
-                             
-                              
-                              document.querySelector('.from-booknow').classList.toggle('activet')
-                         })
-                    }
-
-
-               </script>
+               <!-- <a href="javascript:btnbook('<?php echo $mobil['nama']?>')"><input type="button" value="BOOK NOW" class="mobil-book" id="book-mobil"></a> -->
+               <input type="button" value="BOOK NOW" class="mobil-book" id="book-mobil" onclick="btnbook()" />
+               
+               <!-- onclick="btnbook('')" -->
+               
           </div>
      <?php endforeach; ?>
+     <script>
+                    function btnbook(mobil) {
+                        var mob = mobil
+                         var namaM = document.getElementById('nama-mobil')
+                         if(mobil.nama === namaM){
+                         //      document.getElementById('book-mobil').addEventListener('click', function() {
+                         //           document.getElementById('book-nama').value = mobil.nama
+                         //           document.querySelector('.from-booknow').classList.toggle('activet')
+                         // })
+                         document.getElementById('book-mobil').onclick = function () {
+                              document.getElementById('book-nama').value = mobil.nama
+                                   document.querySelector('.from-booknow').classList.toggle('activet')
+                         }
+                         }
+                         // var nama = mobil.nama
+                    }
+               </script>
 </div>
 <!-- Constact Us -->
-
 <div class="contactus-container">
 
 </div>
@@ -83,28 +81,7 @@
           </div>
      </div>
 </div>
-<div class="form-container">
-     <span class="fas fa-times" id="close-login"></span>
-     <div class="form2-container">
-          <div id="login-form" class="input-field">
-               <form>
-                    <h3>LOGIN</h3>
-                    <input type="text" placeholder="Username" class="box">
-                    <input type="text" placeholder="Password" class="box">
-                    <p>Forget Password? <a href="#"> Click Here</a></p>
-                    <input type="button" value="Login Now" class="btn">
-                    <p>Don't Have an Account? <input type="button" value="Click Here" id="login-click"></p>
-               </form>
-          </div>
-          <div id="regis-form" class="input-field">
-               <form>
-                    <h3>Register</h3>
-                    <input type="text" placeholder="Username" class="box">
-                    <input type="email" placeholder="Email" class="box">
-                    <input type="password" placeholder="Password" class="box">
-                    <input type="button" value="Login Now" class="btn">
-                    <p>Have an Account? <input type="button" value="Click Here" id="regis-click"></p>
-               </form>
-          </div>
-     </div>
-</div>
+
+<script>
+
+</script>

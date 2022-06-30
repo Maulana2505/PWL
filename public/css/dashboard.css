@@ -9,10 +9,10 @@
 }
 
 body {
+     
      background-color: black;
 
 }
-
 header {
      display: flex;
      justify-content: space-around;
@@ -79,113 +79,11 @@ nav ul li a:hover {
      transition: 0.3s;
      background-color: #3D2C8D;
 }
-
+#img-nav{
+     visibility: visible;
+}
 /* LOGIN */
-.form-container{
-     height: 100%;
-     width: 100%;
-     position: absolute;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     top: 0; left: -105%;
-     background-color: rgb(255, 255, 255,0.4);
-     transition: 0.4s;
-     opacity: 0;
-     overflow: hidden;
-}
-.form-container.active{
-     transition: 0.4s;
-     left: 0;
-     opacity: 1;
-}
-/* LOGIN form */
-.form2-container{
-     position: relative;
-     width: 420px;
-     height: 420px;
-     padding: 10px;
-     background-color: black;
-     overflow: hidden;
-}
-.input-field{
-     background-color: transparent;
-     text-align: center;
-     border-radius: 10px;
-     padding: 12px 5px;
-     justify-content: center;
-     align-items: center;
-     position: absolute;
-     transition: 0.2s;
-}
-.input-field form h3{
-     color: white;
-     font-family: 'League Gothic', sans-serif;
-     font-size: 40px;
-     padding-bottom: 10px;
-}
-.input-field form .box{
-     border: none;
-     margin: 5px -3px ;
-     width: 100%;
-     padding: 12px 5px;
-     border-radius: 10px;
-     font-size: 15px;
-}
-.form-container #close-login{
-     position: absolute;
-     top: 10%;right: 10%;
-     font-size: 40px;
-     color: white;
-     cursor: pointer;
-}
-.input-field form p {
-     color: white;
-     font-family: 'League Gothic', sans-serif;
-     padding: 1rem;
-     font-size: 20px;
-}
-.input-field form p a{
-     display: inline-block;
-     color: rgb(84, 84, 216);
-}
-.input-field form .btn{
-     font-family: 'League Gothic', sans-serif;
-     padding: 8px 25px;
-     font-size: 25px;
-     border: none;
-     border-radius: 10px;
-     background-color: rgb(84, 84, 216);
-     color: white;
-     width: 100%;
-     cursor: pointer;
-}
-#login-click{
-     font-family: 'League Gothic', sans-serif;
-     background: none;
-     color: rgb(84, 84, 216);
-     font-size: 25px;
-     font-weight: bold;
-     text-decoration: underline;
-     cursor: pointer;
-}
-#regis-click{
-     font-family: 'League Gothic', sans-serif;
-     background: none;
-     color: rgb(84, 84, 216);
-     font-size: 25px;
-     font-weight: bold;
-     text-decoration: underline;
-     cursor: pointer;
-}
-#login-form{
-     left: 10;
-     transition: 0.4s;
-}
-#regis-form{
-     left: 800px;
-     transition: 0.4s;
-}
+
 .img-container{
      align-items: center;
      overflow: hidden;
@@ -217,9 +115,9 @@ nav ul li a:hover {
 }
 
 .mobil-container{
-     text-align: center;
-     margin: 20px 400px;
+     margin: 20px 20px;
      display: flex;
+     background-color: #3D2C8D;
      flex-wrap: wrap;
      justify-content: center;
      /* grid-template-columns: repeat(3); */
@@ -233,8 +131,9 @@ nav ul li a:hover {
      font-size: 100px;
 }
 .grid{
+     text-align: center;
      background-color: white;
-     padding: 30px;
+     padding: 20px;
      margin: 10px;
      transition: 0.3s;
      border-radius: 10px;

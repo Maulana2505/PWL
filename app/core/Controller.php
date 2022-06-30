@@ -4,6 +4,8 @@ class Controller
 {
      public function view($view, $data = [])
      {
+          session_start();
+          
           require_once '../app/views/' . $view . '.php';
      }
      public function model($model)

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+* {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     box-sizing: border-box;
+}
+body{
+     background-color: black;
+}
+.form-container{
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+     backdrop-filter: blur(3px);
+     background-color: rgba(41, 40, 40, 0.4);
+     transition: 0.4s;
+     opacity: 1;
+     overflow: hidden;
+}
+
+/* LOGIN form */
+.form2-container{
+     position: relative;
+     /* justify-content: center; */
+     width: 420px;
+     height: 440px;
+     padding: 10px;
+     background-color: black;
+     overflow: hidden;
+}
+.input-field{
+     background-color: transparent;
+     text-align: center;
+     border-radius: 10px;
+     padding: 10px 5px;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     transition: 0.2s;
+}
+.input-field form h3{
+     color: white;
+     font-family: 'League Gothic', sans-serif;
+     font-size: 40px;
+     padding-bottom: 10px;
+}
+.input-field form .box{
+     border: none;
+     margin: 5px -3px ;
+     width: 100%;
+     padding: 12px 5px;
+     border-radius: 10px;
+     font-size: 15px;
+}
+.form-container #back-login{
+     position: absolute;
+     top: 10%;
+     left: 10%;
+     color: white;
+     cursor: pointer;
+     
+}
+.input-field form p {
+     color: white;
+     font-family: 'League Gothic', sans-serif;
+     padding: 1rem;
+     font-size: 20px;
+}
+.input-field form p a{
+     display: inline-block;
+     color: rgb(84, 84, 216);
+}
+.input-field form .btn{
+     font-family: 'League Gothic', sans-serif;
+     padding: 8px 25px;
+     font-size: 25px;
+     border: none;
+     border-radius: 10px;
+     background-color: rgb(84, 84, 216);
+     color: white;
+     width: 100%;
+     cursor: pointer;
+}
+#login-click{
+     font-family: 'League Gothic', sans-serif;
+     background: none;
+     color: rgb(84, 84, 216);
+     font-size: 25px;
+     font-weight: bold;
+     text-decoration: underline;
+     cursor: pointer;
+}
+#regis-click{
+     font-family: 'League Gothic', sans-serif;
+     background: none;
+     color: rgb(84, 84, 216);
+     font-size: 25px;
+     font-weight: bold;
+     text-decoration: underline;
+     cursor: pointer;
+}
+#login-form{
+     left: 10;
+     transition: 0.4s;
+}
+#regis-form{
+     left: 800px;
+     transition: 0.4s;
+}
