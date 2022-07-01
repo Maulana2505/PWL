@@ -11,7 +11,7 @@
 body {
      
      background-color: black;
-
+     
 }
 header {
      display: flex;
@@ -115,9 +115,10 @@ nav ul li a:hover {
 }
 
 .mobil-container{
-     margin: 20px 20px;
+     /* margin:  20px; */
      display: flex;
-     background-color: #3D2C8D;
+     height: 80%;
+     /* background-color: #3D2C8D; */
      flex-wrap: wrap;
      justify-content: center;
      /* grid-template-columns: repeat(3); */
@@ -179,7 +180,8 @@ nav ul li a:hover {
      left: 0;
      opacity: 1;
 }
-/* LOGIN form */
+
+/* Book now */
 .from2-booknow{
      position: relative;
      width: 420px;

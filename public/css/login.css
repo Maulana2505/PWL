@@ -6,7 +6,7 @@
      box-sizing: border-box;
 }
 body{
-     background-color: black;
+     background-color: orange;
 }
 .form-container{
      height: 100%;
@@ -16,7 +16,7 @@ body{
      justify-content: center;
      align-items: center;
      
-     backdrop-filter: blur(3px);
+     /* backdrop-filter: blur(3px); */
      background-color: rgba(41, 40, 40, 0.4);
      transition: 0.4s;
      opacity: 1;

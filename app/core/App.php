@@ -10,14 +10,9 @@ class App
      {
           $url = $this->parseURL();
 
-          if (file_exists('../app/controllers/' . strval($url[0]) . '.php')) {
-               if ($url[0] == null) {
-                    // $url[0] = $this->controller;
-                    $this->controller = $url[0];
-               } else {
-                    $this->controller = $url[0];
-                    unset($url[0]);
-               }
+          if (file_exists('../app/controllers/' . $url[0] . '.php')) {
+               $this->controller = $url[0] ;
+			unset($url[0]);
           }
 
           require_once '../app/controllers/' . $this->controller . '.php';
@@ -43,7 +38,7 @@ class App
           if (isset($_GET['url'])) {
                $url = rtrim($_GET['url']);
                $url = filter_var($url, FILTER_SANITIZE_URL);
-               $url = explode('/', $_GET['url']);
+               $url = explode('/', $url);
                return $url;
           }
      }

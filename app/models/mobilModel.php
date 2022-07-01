@@ -55,5 +55,12 @@ class mobilModel
      public function getallMobil(){
           return $this->mobil;
      }
+     public function getMobil()
+     {
+          $query = "SELECT * FROM mobil";
+          $this->db->query($query);
+         return $this->db->resultSet();
+
+     }
      
 }

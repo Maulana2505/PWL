@@ -4,9 +4,14 @@ class Controller
 {
      public function view($view, $data = [])
      {
-          session_start();
-          
+          if (session_status() !== PHP_SESSION_ACTIVE) {
+               session_start();
+          }
+          if(!isset($_SESSION['id'])){
+               require_once "../app/views/login/index.php";
+          }else{
           require_once '../app/views/' . $view . '.php';
+          }
      }
      public function model($model)
      {

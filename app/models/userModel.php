@@ -32,10 +32,10 @@ class userModel{
                $this->db->query($query);
                $this->db->bind('username',$username);
                $this->db->bind('password',$password);
-           //     $this->db->exe();
+               $this->db->exe();
                return $this->db->resultSet();
           } catch (\Exception $e) {
-               
+               echo $e;
           }
      }
 }
