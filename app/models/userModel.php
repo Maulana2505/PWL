@@ -20,7 +20,6 @@ class userModel{
          $this->db->bind('alamat',$data['alamat']);
          $this->db->bind('notlp',$data['notlp']);
          $this->db->bind('email',$data['email']);
-
          $this->db->exe();
          return $this->db->rowCount();
      }

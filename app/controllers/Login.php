@@ -44,6 +44,6 @@ class Login extends Controller
           unset($_SESSION['id']);
           unset($_SESSION['nama']);
           unset($_SESSION['email']);
-          header('Location:' . BASEURL . 'login');
+          header('Location:' . BASEURL . 'dashboard');
      }
 }

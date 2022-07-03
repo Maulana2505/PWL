@@ -6,57 +6,67 @@
      box-sizing: border-box;
 }
 body{
-     background-color: black;
+     background-color: orange;
 }
-.form-container{
+.from-booknow {
      height: 100%;
      width: 100%;
-     position: absolute;
      display: flex;
+     position: absolute;
      justify-content: center;
      align-items: center;
-     backdrop-filter: blur(5px);
-     background-color: rgba(83, 81, 81, 0.4);
+     top: 0;
+     left: 0;
+     background-color: rgb(255, 255, 255, 0.4);
      transition: 0.4s;
-     opacity: 1;
+     opacity:1;
      overflow: hidden;
 }
- 
-/* LOGIN form */
-.form2-container{
+
+.from-booknow.activet {
+     transition: 0.4s;
+     left: 0;
+     opacity: 1;
+}
+
+/* Book now */
+.from2-booknow {
      position: relative;
-     /* justify-content: center; */
      width: 420px;
-     height: 440px;
+     height: 540px;
      padding: 10px;
      background-color: black;
      overflow: hidden;
 }
-.input-field{
+
+.input-field-booknow {
      background-color: transparent;
      text-align: center;
      border-radius: 10px;
-     padding: 10px 5px;
+     padding: 12px 5px;
      justify-content: center;
      align-items: center;
      position: absolute;
      transition: 0.2s;
 }
-.input-field form h3{
+
+.input-field-booknow form h3 {
      color: white;
      font-family: 'League Gothic', sans-serif;
      font-size: 40px;
      padding-bottom: 10px;
 }
-.input-field form .box{
+
+.input-field-booknow form .box {
      border: none;
-     margin: 5px -3px ;
+     margin: 5px -3px;
      width: 100%;
      padding: 12px 5px;
      border-radius: 10px;
      font-size: 15px;
 }
-.form-container #back-login{
+
+.from-booknow #back-booking{
      position: absolute;
      top: 10%;
      left: 10%;
@@ -64,19 +74,22 @@ body{
      cursor: pointer;
      
 }
-.input-field form p {
+
+.input-field-booknow form p {
      color: white;
      font-family: 'League Gothic', sans-serif;
      padding: 1rem;
      font-size: 20px;
 }
-.input-field form p a{
+
+.input-field-booknow form p a {
      display: inline-block;
      color: rgb(84, 84, 216);
 }
-.input-field form .btn{
+
+.input-field-booknow form .btn {
      font-family: 'League Gothic', sans-serif;
-     padding: 8px 25px;
+     padding: 10px 25px;
      font-size: 25px;
      border: none;
      border-radius: 10px;
@@ -85,29 +98,20 @@ body{
      width: 100%;
      cursor: pointer;
 }
-#login-click{
+.pickup{
+     display: block;
+     color: white;
      font-family: 'League Gothic', sans-serif;
-     background: none;
-     color: rgb(84, 84, 216);
-     font-size: 25px;
-     font-weight: bold;
-     text-decoration: underline;
-     cursor: pointer;
+     font-size: 24px;
 }
-#regis-click{
-     font-family: 'League Gothic', sans-serif;
-     background: none;
-     color: rgb(84, 84, 216);
-     font-size: 25px;
-     font-weight: bold;
-     text-decoration: underline;
-     cursor: pointer;
+.tgl-con{
+     padding: 5px 0;
 }
-#login-form{
-     left: 10;
-     transition: 0.4s;
-}
-#regis-form{
-     left: 800px;
-     transition: 0.4s;
+.date{
+     border: none;
+     margin: 5px -3px;
+     width: 80%;
+     padding: 10px 5px;
+     border-radius: 10px;
+     font-size: 15px;
 }

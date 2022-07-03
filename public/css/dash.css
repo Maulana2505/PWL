@@ -1,6 +1,9 @@
 /* Header */
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
-
+html{
+     scroll-behavior: smooth;
+     
+}
 * {
      padding: 0;
      margin: 0;
@@ -19,6 +22,12 @@ header {
      align-items: center;
      height: 80px;
      width: 100%;
+     position: sticky;
+     z-index: 100;
+     top: 0;
+     left: 0;
+     right: 0;
+     backdrop-filter: blur(4px);
 }
 
 .logo span {
@@ -57,9 +66,9 @@ nav ul li a {
      transition: 0.4s;
 }
 
-.Active {
+/* .Active {
      background: rgb(84, 84, 216);
-}
+} */
 
 nav ul li a:hover {
      background: rgb(84, 84, 216);
@@ -87,6 +96,7 @@ nav ul li a:hover {
 .img-container{
      align-items: center;
      overflow: hidden;
+     height: 100%;
 }
 .img-con2 .img-slider{
      align-items: center;
@@ -99,7 +109,7 @@ nav ul li a:hover {
 }
 .img-slider{ 
      opacity: 0.3;
-     height: 90%;
+     height: 100%;
      width: 100%;
      justify-content: center;
 }
@@ -114,40 +124,44 @@ nav ul li a:hover {
      font-weight: bold;
 }
 
-.mobil-container{
-     /* margin:  20px; */
-     display: flex;
-     height: 80%;
-     /* background-color: #3D2C8D; */
-     flex-wrap: wrap;
+.mob-container{
+     bottom: 100%;
+     /* height: 90%; */
+     align-items: center;
      justify-content: center;
-     /* grid-template-columns: repeat(3); */
-     
+}
+.mobil-container{
+     margin: 0 10%;
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     justify-content: center; 
+}
+#nama-mobil{
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
 }
 .txt-veh{
-     padding: 20px;
+     padding-top: 85px;
+     padding-bottom: 15px;
      text-align: center;
      color: white;
+     text-overflow: ellipsis;
      font-family: 'League Gothic', sans-serif;
      font-size: 100px;
 }
 .grid{
      text-align: center;
      background-color: white;
-     padding: 20px;
+     padding: 15px;
      margin: 10px;
+     width: 200px;
+     
      transition: 0.3s;
      border-radius: 10px;
      
 }
-/* .mobil-grid-container{
-     padding: 0 10%;
-     display: flex;
-     flex-wrap: wrap;
-     background-color: #3D2C8D;
-     background-color: #3D2C8D;
-     grid-template-columns: repeat(auto-fill);
-} */
 .mobil-container .grid .mobil-book{
      font-family: 'League Gothic', sans-serif;
      padding: 8px 25px;
@@ -159,54 +173,42 @@ nav ul li a:hover {
      width: 100%;
 }
 .mobil-container .grid:hover{
-     padding: 50px;
+     padding: 18px;
 }
 /* Form BookNow */
-.from-booknow{
-     height: 100%;
+
+.contactus-container{
+     height: 80%;
      width: 100%;
-     display: flex;
      position: absolute;
+     display: flex;
      justify-content: center;
      align-items: center;
-     top: 115%; left: -105%;
-     background-color: rgb(255, 255, 255,0.4);
+     
+     /* backdrop-filter: blur(3px); */
+     /* background-color: rgba(41, 40, 40, 0.4); */
      transition: 0.4s;
-     opacity: 0;
-     overflow: hidden;
 }
-.from-booknow.activet{
-     transition: 0.4s;
-     left: 0;
-     opacity: 1;
-}
-
-/* Book now */
-.from2-booknow{
+.form-contactus{
      position: relative;
+     /* justify-content: center; */
      width: 420px;
-     height: 420px;
+     height: 440px;
      padding: 10px;
-     background-color: black;
-     overflow: hidden;
+     background-color: white;
+     /* overflow: hidden; */
 }
-.input-field-booknow{
+.form-contactus{
      background-color: transparent;
      text-align: center;
      border-radius: 10px;
-     padding: 12px 5px;
+     padding: 10px 5px;
      justify-content: center;
      align-items: center;
      position: absolute;
      transition: 0.2s;
 }
-.input-field-booknow form h3{
-     color: white;
-     font-family: 'League Gothic', sans-serif;
-     font-size: 40px;
-     padding-bottom: 10px;
-}
-.input-field-booknow form .box{
+.form-contactus form .box{
      border: none;
      margin: 5px -3px ;
      width: 100%;
@@ -214,26 +216,9 @@ nav ul li a:hover {
      border-radius: 10px;
      font-size: 15px;
 }
-.from-booknow #close-book{
-     position: absolute;
-     top: 10%;right: 10%;
-     font-size: 40px;
-     color: white;
-     cursor: pointer;
-}
-.input-field-booknow form p {
-     color: white;
+.form-contactus form .btn{
      font-family: 'League Gothic', sans-serif;
-     padding: 1rem;
-     font-size: 20px;
-}
-.input-field-booknow form p a{
-     display: inline-block;
-     color: rgb(84, 84, 216);
-}
-.input-field-booknow form .btn{
-     font-family: 'League Gothic', sans-serif;
-     padding: 10px 25px;
+     padding: 8px 25px;
      font-size: 25px;
      border: none;
      border-radius: 10px;

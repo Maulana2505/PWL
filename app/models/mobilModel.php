@@ -1,51 +1,6 @@
 <?php
 class mobilModel
 {
-     private $mobil = [
-          [
-               "img" => "img/mobil-ven1.png",
-               "nama" => "Toyota Invaza",
-               "harga" => "300"
-
-          ],
-          [
-               "img" => "img/mobil-ven2.jpeg",
-               "nama" => "Toyota Alphard",
-               "harga" => "400"
-          ],
-          // [
-          //      "img" => "/img/mobil-ven1.png",
-          //      "nama" => "Toyota Invaza",
-          //      "harga" => "300"
-          // ],[
-          //      "img" => "/img/mobil-ven1.png",
-          //      "nama" => "Toyota Invaza",
-          //      "harga" => "300"
-          // ],
-          // [
-          //      "img" => "/img/mobil-ven1.png",
-          //      "nama" => "Toyota Invaza",
-          //      "harga" => "300"
-          // ],[
-          //      "img" => "/img/mobil-ven1.png",
-          //      "nama" => "Toyota Invaza",
-          //      "harga" => "300"
-          // ],
-          // [
-          //      "img" => "/img/mobil-ven1.png",
-          //      "nama" => "Toyota Invaza",
-          //      "harga" => "300"
-          // ],[
-          //      "img" => "/img/mobil-ven1.png",
-          //      "nama" => "Toyota Invaza",
-          //      "harga" => "300"
-          // ],
-          // [
-          //      "img" => "/img/mobil-ven1.png",
-          //      "nama" => "Toyota Invaza",
-          //      "harga" => "300"
-          // ],
-     ];
      private $table = 'mobil';
      private $db;
      public function __construct()
@@ -60,7 +15,13 @@ class mobilModel
           $query = "SELECT * FROM mobil";
           $this->db->query($query);
          return $this->db->resultSet();
-
+     }
+     public function getModilId($id)
+     {
+          $query = "SELECT * FROM mobil where id=:id";
+          $this->db->query($query);
+          $this->db->bind('id',$id);
+         return $this->db->single();
      }
      
 }
